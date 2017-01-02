@@ -6,9 +6,11 @@ A CodeIgniter Hooks that will Minify the HTML, Reducing network latency, enhanci
 Installation
 -----------------
 
-Copy `/application/config/hooks.php` and `/application/hooks/Minifyhtml.php` into your `application` folder Project
+Copy `/application/config/hooks.php` and 
+`/application/hooks/Minifyhtml.php` 
+into your `application` folder Project
 
-Modify your `/applicatoin/config/config.php` into this:
+Modify your `/application/config/config.php` into this:
 ```php
 	-/*
 	|--------------------------------------------------------------------------
@@ -25,5 +27,11 @@ Modify your `/applicatoin/config/config.php` into this:
 and your Done!
 
 ------------------------------------------------------
-Everytime you call `$this->load->view('view/view_file');`, output function in Minifyhtml Class will be used.
+Everytime you call `$this->load->view('view/view_file');`, 
+output function in Minifyhtml Class will be used.
+
+Change Log
+==========
+**2nd January 2017**
+Added an ability to skip **style** and **script tags**
 
