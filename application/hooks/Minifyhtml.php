@@ -7,6 +7,10 @@
  * @category	Output
  * @author      John Gerome
  * @link	    https://github.com/johngerome/CodeIgniter-Minifyhtml-hooks
+ * 
+ * Edited by
+ * @author Fahad Kassim
+ * @link https://github.com/fadsel/CodeIgniter-Minifyhtml-hooks
  */
  
 class Minifyhtml {
@@ -28,12 +32,14 @@ class Minifyhtml {
                 (?:         # Zero or more of...
                   [^<]++    # Either one or more non-"<"
                 | <         # or a < starting a non-blacklist tag.
-                  (?!/?(?:textarea|pre)\b)
+                            # Skip Script and Style Tags
+                  (?!/?(?:textarea|pre|script|style)\b)
                 )*+         # (This could be "unroll-the-loop"ified.)
               )             # End (unnecessary) group.
               (?:           # Begin alternation group.
                 <           # Either a blacklist start tag.
-                (?>textarea|pre)\b
+                            # Dont foget the closing tags 
+                (?>textarea|pre|script|style)\b
               | \z          # or end of file.
               )             # End alternation group.
             )  # If we made it here, we are not in a blacklist tag.
