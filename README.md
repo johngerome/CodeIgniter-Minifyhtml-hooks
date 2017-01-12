@@ -27,3 +27,7 @@ and your Done!
 ------------------------------------------------------
 Everytime you call `$this->load->view('view/view_file');`, output function in Minifyhtml Class will be used.
 
+
+Contributors
+-------------
+- [Fahad Kassim](https://github.com/fadsel)
