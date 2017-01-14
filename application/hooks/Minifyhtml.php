@@ -7,6 +7,10 @@
  * @category	Output
  * @author      John Gerome
  * @link	    https://github.com/johngerome/CodeIgniter-Minifyhtml-hooks
+ * 
+ * Edited by
+ * @author Fahad Kassim
+ * @link https://github.com/fadsel/CodeIgniter-Minifyhtml-hooks
  */
  
 class Minifyhtml {
